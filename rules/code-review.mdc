@@ -1,0 +1,38 @@
+---
+description: Comprehensive code review guidance
+alwaysApply: true
+---
+
+# Code Review Guidance
+
+When asked to review code, perform a comprehensive review with focus on:
+
+1. Code quality
+- Clean code principles and best practices
+- Proper error handling and edge cases
+- Code readability and maintainability
+- Potential bugs or issues
+
+2. Security
+- Potential security vulnerabilities
+- Input sanitization
+- Authentication and authorization logic
+
+3. Performance
+- Performance bottlenecks
+- Query efficiency where relevant
+- Memory leaks or resource issues
+
+4. Testing
+- Adequate test coverage
+- Test quality and edge cases
+- Missing test scenarios
+
+5. Documentation
+- Code documentation quality
+- README updates for new features when needed
+- API documentation accuracy when applicable
+
+Provide detailed feedback using inline comments for specific issues.
+
+Use top-level comments for general observations or praise.
