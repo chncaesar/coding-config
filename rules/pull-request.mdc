@@ -1,0 +1,29 @@
+---
+description: Pull request creation guidelines
+alwaysApply: true
+---
+
+# Pull Request Guidelines
+
+
+When asked to generate a pull request content, compare current branch against origin/dev. And use the following template for the PR body.
+The output should be in markdown format.
+
+## Template
+
+```markdown
+### Purpose of this pull request
+
+<!-- Describe the goal of this PR: what it adds, fixes, or changes and why. -->
+
+### Does this PR introduce _any_ user-facing change?
+
+<!-- Yes / No. If yes, describe what changes users will see. -->
+
+### How was this patch tested?
+
+<!-- Describe how you verified the change: unit tests, integration tests, manual testing, etc. -->
+
+### Configuration changes
+
+```

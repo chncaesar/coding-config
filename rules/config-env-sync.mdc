@@ -1,0 +1,26 @@
+---
+description: Keep env and helm in sync with Python config additions
+globs: **/*config*.py
+alwaysApply: false
+---
+
+# Config Sync Checks
+
+When adding a new configuration entry in a Python config file such as `config.py`, also check whether the change requires updates in:
+
+- `.env-example`
+- `.env`
+- Helm values or templates under `deployment/helm/`
+
+If the new config is sourced from an environment variable, update `.env-example` and `.env` when appropriate.
+
+If the new config must be provided at deploy time, update the relevant Helm files as part of the same task.
+
+Do not assume these companion files can be skipped. Verify each one explicitly and make the needed edits when the new config depends on it.
+
+Example:
+
+- Add `FOO_TIMEOUT` to `config.py`
+- Check whether `FOO_TIMEOUT` should be added to `.env-example`
+- Check whether local `.env` should include it
+- Check whether Helm values or env injection need the same variable

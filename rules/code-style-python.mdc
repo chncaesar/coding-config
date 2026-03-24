@@ -1,0 +1,50 @@
+---
+description: Python coding style and abstraction rules
+alwaysApply: true
+---
+
+# Python Coding Style Guide and Abstraction Rules
+
+## Core Principles
+
+- Follow DRY. Before adding new functionality, look for existing functions, classes, or modules with similar behavior.
+- Follow YAGNI. Avoid over-engineering, but extract abstractions when duplication is real.
+- Read before you write. Browse the project for existing utilities, base classes, decorators, and common modules before creating new code.
+
+## Code Style
+
+- Use `snake_case` for variables, functions, and methods.
+- Use `CamelCase` for classes.
+- Use `UPPER_SNAKE_CASE` for constants.
+- Use `_single_leading_underscore` for private members.
+- Use 4 spaces for indentation and no tabs.
+- Keep line length to 88 characters when practical.
+- Group imports as standard library, third-party, and local modules, separated by blank lines.
+- Prefer absolute imports.
+- Use consistent English for comments and docstrings unless the project clearly uses another convention.
+- Add docstrings for public functions and classes.
+- Add brief inline comments only when code is not self-explanatory.
+
+## Abstraction and Reuse
+
+- Before writing a new function or class, search for existing implementations by keyword and review common utility modules.
+- Reuse base classes, mixins, and decorators when they already fit the problem.
+- When similar logic appears in multiple places, extract a shared function or class.
+- Prefer parameterization or composition over copy-paste branching.
+- Keep functions focused on a single responsibility.
+- When a function needs too many parameters, consider introducing a domain class instead of passing raw dicts.
+- Favor composition over inheritance unless the relationship is clearly "is-a".
+- Keep modules focused on a single domain.
+- Move constants and configuration values to clear central locations.
+
+## Exception Handling
+
+- Do not catch overly broad exceptions such as `except Exception` unless at a true top-level boundary.
+- Reuse project-specific exception classes where available.
+- Keep `try` blocks narrow.
+
+## Testing
+
+- Add unit tests for public abstractions and behavior changes.
+- Cover normal paths and important edge cases.
+- When fixing a bug, add or update a test that would have caught it.
